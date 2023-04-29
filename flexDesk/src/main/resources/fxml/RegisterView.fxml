@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flexDesk.javafx.controller.RegisterViewController">
+   <children>
+      <Label prefHeight="46.0" prefWidth="289.0" text="Neuen Nutzer registrieren" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="25.0" top="25.0" />
+         </VBox.margin>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="299.0" prefWidth="534.0">
+         <children>
+            <TextField fx:id="TextField_username" layoutX="169.0" layoutY="56.0" onAction="#Button_register_click" prefHeight="24.0" prefWidth="238.0" />
+            <PasswordField fx:id="TextField_password" layoutX="169.0" layoutY="126.0" onAction="#Button_register_click" prefHeight="24.0" prefWidth="238.0" />
+            <PasswordField fx:id="TextField_repeat_password" layoutX="169.0" layoutY="163.0" onAction="#Button_register_click" prefHeight="24.0" prefWidth="238.0" />
+            <Button fx:id="Button_register" layoutX="169.0" layoutY="231.0" mnemonicParsing="false" onAction="#Button_register_click" text="Registrieren">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="Label_back" layoutX="384.0" layoutY="235.0" onMouseClicked="#Label_back_click" prefHeight="16.0" prefWidth="47.0" text="Zurück" textFill="#2713da">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="Label_msg" layoutX="173.0" layoutY="211.0" prefHeight="16.0" prefWidth="361.0" textFill="RED" />
+            <Label layoutX="79.0" layoutY="60.0" text="Nutzername:" />
+            <Label layoutX="101.0" layoutY="130.0" text="Passwort:" />
+            <Label layoutX="17.0" layoutY="167.0" text="Passwort wiederholen:" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="377.0" maxWidth="584.0" minHeight="300.0" minWidth="500.0" prefHeight="377.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flexDesk.javafx.controller.EditDeskViewController">
+   <children>
+      <AnchorPane maxHeight="75.0" maxWidth="587.0" minHeight="61.0" minWidth="500.0" prefHeight="75.0" prefWidth="584.0" style="-fx-background-color: #707070;">
+         <children>
+            <Label layoutX="24.0" layoutY="24.0" text="Tisch bearbeiten" textFill="WHITE" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="247.0" maxWidth="585.0" minHeight="150.0" minWidth="500.0" prefHeight="247.0" prefWidth="584.0">
+         <children>
+            <ScrollPane fitToWidth="true" layoutX="343.0" layoutY="27.0" prefHeight="200.0" prefWidth="227.0">
+               <content>
+                  <VBox fx:id="vbox_features" prefHeight="197.0" prefWidth="225.0" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="343.0" layoutY="6.0" prefHeight="16.0" prefWidth="102.0" text="Features" />
+            <MenuButton fx:id="MenuButton_building" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" text="Gebäude" />
+            <MenuButton fx:id="MenuButton_room" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" text="Raum" />
+            <TextField fx:id="textfield_ispeed" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="101.0" />
+            <Text layoutX="196.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MB/s" />
+            <Text layoutX="19.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Internetgeschwindigkeit" wrappingWidth="161.0" />
+            <MenuButton fx:id="MenuButton_features" layoutX="15.0" layoutY="135.0" mnemonicParsing="false" text="Features">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+            <Label fx:id="label_msg" layoutX="14.0" layoutY="207.0" prefHeight="30.0" prefWidth="325.0" />
+            <Text layoutX="14.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tischname" wrappingWidth="171.0" />
+            <TextField fx:id="textfield_name" layoutX="14.0" layoutY="185.0" />
+         </children></AnchorPane>
+      <AnchorPane maxHeight="75.0" maxWidth="500.0" minHeight="60.0" minWidth="500.0" prefHeight="60.0" prefWidth="500.0">
+         <children>
+            <Button fx:id="button_confirm" layoutX="158.0" layoutY="26.0" mnemonicParsing="false" onAction="#button_confirm_click" text="Bestätigen" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="272.0" />
+            <Button fx:id="button_cancel" layoutX="250.0" layoutY="25.0" mnemonicParsing="false" onAction="#button_cancel_click" text="Abbruch" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="270.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

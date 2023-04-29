@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="766.0" style="-fx-background-color: #54a7b7;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flexDesk.javafx.controller.AdminViewController">
+   <children>
+      <HBox nodeOrientation="LEFT_TO_RIGHT" prefHeight="75.0" prefWidth="600.0" style="-fx-background-color: #707070;" VBox.vgrow="NEVER">
+         <children>
+            <Label prefHeight="75.0" prefWidth="322.0" text="FlexDesk - Admin View" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="25.0" />
+               </HBox.margin>
+            </Label>
+            <AnchorPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="75.0" prefWidth="349.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="2.0" />
+               </HBox.margin>
+               <children>
+                  <Button fx:id="button_logout" layoutX="32.0" layoutY="26.0" mnemonicParsing="false" onAction="#button_logout_click" style="-fx-background-radius: 10;" text="Logout">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="button_mainMenu" layoutX="108.0" layoutY="26.0" mnemonicParsing="false" onAction="#button_mainView_click" prefHeight="1.0" prefWidth="89.0" style="-fx-background-radius: 10;" text="Main Menu">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="button_statistics" layoutX="210.0" layoutY="26.0" mnemonicParsing="false" onAction="#button_statistics_click" style="-fx-background-radius: 10;" text="Statistics">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="button_settings" layoutX="301.0" layoutY="26.0" mnemonicParsing="false" onAction="#button_settings_click" style="-fx-background-radius: 10;" text="Overall Settings">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="302.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox fx:id="vbox_desklist" prefHeight="406.0" prefWidth="0.0" style="-fx-border-color: grey; -fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="69.0" prefWidth="389.0" style="-fx-border-color: grey; -fx-border-insets: 5;" VBox.vgrow="NEVER">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="63.0" prefWidth="182.0" text="Alle Tische">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="57.0" prefWidth="164.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Button fx:id="add_desk_button" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="80.0" layoutY="2.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#add_desk_button_click" prefHeight="24.0" prefWidth="109.0" text="+Add Desk" AnchorPane.rightAnchor="23.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button fx:id="button_addfeature" layoutX="59.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#button_addfeature_click" prefHeight="24.0" prefWidth="122.0" text="+Add Feature" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="30.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="vbox_desklist" prefHeight="319.0" prefWidth="353.0" />
+                     </content>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="396.0" prefWidth="25.0" />
+            <VBox fx:id="vbox_activedesks" prefHeight="385.0" prefWidth="102.0" style="-fx-border-color: grey; -fx-background-color: white;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox prefHeight="69.0" prefWidth="289.0" style="-fx-border-color: grey; -fx-border-insets: 5;" VBox.vgrow="NEVER">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="63.0" prefWidth="182.0" text="Gebuchte Tische">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToWidth="true" prefHeight="323.0" prefWidth="328.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="vbox_activedesks" prefHeight="320.0" prefWidth="326.0" />
+                     </content>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="15.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
